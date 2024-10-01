@@ -1,8 +1,11 @@
 # Web Development Project 2 - *ProjectTwo*
 
-Submitted by: Juian
+Submitted by: Juan Pirela
 
-This web app: **insert description**
+This web app: 
+In this project, you will be creating a web app for flashcards! You can choose pairs of items to store in a flashcard-like format that users can then use to study, learn something new, or play a guessing game. Users will be able to study cards in a randomized order.
+
+In the second part of this project next week, you will extend the web app to allow users to enter an answer (with exact or fuzzy matching), and move backwards and forwards through the list of cards.
 
 Time spent: **X** hours spent in total
 
