@@ -28,7 +28,9 @@ body{
   position: relative;
   
 }
-
+button{
+  
+}
 
 .card-front, .card-back{
   position: absolute;
