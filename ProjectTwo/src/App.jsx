@@ -17,7 +17,7 @@ const App = () => {
     },
     {
       question: 'In Java, which keyword is used to inherit a class?',
-      answer: 'extend'
+      answer: 'extends'
     },
     {
       question: 'Which data structure follows the LIFO (Last In, First Out) principle?',
@@ -45,13 +45,43 @@ const App = () => {
     },
   ];
 
-  const [currentCard, setCurrentCard] = useState(flashCard[0]);
+  const [currentIndex, setCurrentIndex] = useState(0); 
   const [showAnswer, setShowAnswer] = useState(false);
+  const [userGuess, setUserGuess] = useState(''); 
+  const [feedback, setFeedback] = useState(''); 
 
-  const handleNextCard = () => {
-    const randomIndex = Math.floor(Math.random() * flashCard.length);
-    setCurrentCard(flashCard[randomIndex]);
+  
+  const nextCard = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % flashCard.length);
     setShowAnswer(false);
+    setFeedback('');
+    setUserGuess('');
+  };
+
+  
+  const previousCard = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + flashCard.length) % flashCard.length);
+    setShowAnswer(false);
+    setFeedback('');
+    setUserGuess('');
+  };
+
+  
+  const handleGuessSubmit = () => {
+    if (userGuess.trim().toLowerCase() === flashCard[currentIndex].answer.toLowerCase()) {
+      setFeedback('Correct!');
+    } else {
+      setFeedback('Incorrect, try again!');
+    }
+  };
+
+  // Handle Random card selection
+  const handleRandomCard = () => {
+    const randomIndex = Math.floor(Math.random() * flashCard.length);
+    setCurrentIndex(randomIndex);
+    setShowAnswer(false);
+    setFeedback('');
+    setUserGuess('');
   };
 
   return (
@@ -65,17 +95,30 @@ const App = () => {
       <div className={`card ${showAnswer ? 'flipped' : ''}`} onClick={() => setShowAnswer(!showAnswer)}>
         {!showAnswer ? (
           <div className="card-front">
-            <h3>{currentCard.question}</h3>
+            <h3>{flashCard[currentIndex].question}</h3>
           </div>
         ) : (
           <div className="card-back">
-            <h3>{currentCard.answer}</h3>
+            <h3>{flashCard[currentIndex].answer}</h3>
           </div>
         )}
       </div>
-      <button onClick={handleNextCard}>
-        Next
-      </button>
+      <div className='user-input'>
+        Guess the answer {' '}
+        <input
+          type="text"
+          placeholder='Enter a Guess'
+          value={userGuess} 
+          onChange={(e) => setUserGuess(e.target.value)} 
+        />
+        <button onClick={handleGuessSubmit}>Submit</button>
+      </div>
+      {feedback && <p className="feedback">{feedback}</p>}
+      <div>
+        <button onClick={previousCard}>Previous</button>
+        <button onClick={nextCard}>Next</button>
+        <button onClick={handleRandomCard}>Random Card</button>
+      </div>
     </div>
   );
 };

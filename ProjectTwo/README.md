@@ -1,26 +1,26 @@
-# Web Development Project 2 - *ProjectTwo*
+# Web Development Project 3 - FlashCards Game
 
-Submitted by: Juian
+Submitted by: Juan Pirela
 
-This web app: **insert description**
+This web app: In Flashcards! Part 1, you chose pairs of items to store in a flashcard-like format that users can use to study, learn something new, or play a guessing game. This week, you will extend the functionality of your web app! You will build features that allow users to enter an answer (with exact or fuzzy matching) and move backwards and forwards through the list of cards.
 
-Time spent: **X** hours spent in total
+Time spent: 2 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X ] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [ X] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [ X] **A list of card pairs is created**
-- [ X] **Clicking on the card shows the corresponding component of the information pair**
-- [ X] **Clicking the next button displays a random new card**
+- [ X] **The user can enter their guess in a box before seeing the flipside of the card**
+- [X ] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [X ] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [ X] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] *visual style implemented*
+- [ ] A shuffle button is used to randomize the order of the cards
+- [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [ ] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
@@ -28,7 +28,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-<img src='./src/assets/Project2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/src/assets/Project3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 

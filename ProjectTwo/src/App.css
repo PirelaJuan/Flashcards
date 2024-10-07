@@ -26,11 +26,14 @@ body{
   transition: .15s;
   transform-origin: center;
   position: relative;
+  margin-bottom: 10px;
   
 }
 button{
-  
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
+
 
 .card-front, .card-back{
   position: absolute;
