@@ -33,5 +33,5 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='/src/assets/Project3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./src/assets/Project3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
